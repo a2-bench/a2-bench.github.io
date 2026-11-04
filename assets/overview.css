@@ -30,6 +30,13 @@
 .example-runs tbody th { font-weight: 400; border-bottom: 1px solid var(--rule, #d8e5f0); }
 .example-comparison-note { font-size: 14px; margin: 16px 0 24px; }
 .example-takeaway { background: var(--sky, #f6f5f1); padding: 20px; border-radius: 8px; }
+.finding-figure { max-width: 850px; margin: 24px 0; }
+.finding-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
+.finding-figure figcaption, .finding-source-note { font-size: 12px; line-height: 1.75; color: var(--muted); margin-top: 12px; }
+.finding-table-wrap { overflow-x: auto; margin: 24px 0 12px; }
+.protocol-results { width: 100%; min-width: 580px; border-collapse: collapse; font-size: 12px; line-height: 1.7; }
+.protocol-results caption { text-align: left; font-weight: 700; margin-bottom: 12px; }
+.protocol-results th, .protocol-results td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); }
 .research-site > .executive-summary { width: min(1224px, calc(100% - 96px)); margin: 0 auto 40px; }
 .research-site .executive-summary p { color: var(--body); }
 .research-site main .legal-example > h2 { margin-top: 40px; }

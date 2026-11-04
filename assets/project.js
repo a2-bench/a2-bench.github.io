@@ -50,7 +50,7 @@ let activeFamily = 'discovery';
 function showFailure(index) {
   const family = families[activeFamily]; const mode = family.modes[index];
   $$('#failure-list button').forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
-  $('#failure-detail').innerHTML = `<span class="family-label">${family.label.toUpperCase()}</span><h3>${escapeHTML(mode[0])}</h3><p>${escapeHTML(mode[1])}</p><div class="failure-lesson"><strong>THE TAKEAWAY</strong><p>${escapeHTML(mode[2])}</p></div><a href="research.html#${family.anchor}">See the evidence behind this family ↗</a>`;
+  $('#failure-detail').innerHTML = `<span class="family-label">${family.label.toUpperCase()}</span><h3>${escapeHTML(mode[0])}</h3><p>${escapeHTML(mode[1])}</p><div class="failure-lesson"><strong>THE TAKEAWAY</strong><p>${escapeHTML(mode[2])}</p></div><a href="#${family.anchor}">See related findings ↓</a>`;
 }
 function selectFamily(key) {
   activeFamily = key;
@@ -121,7 +121,7 @@ function selectDomain(key) {
   const data=domains[key];
   $$('[data-domain]').forEach(button=>{const active=button.dataset.domain===key;button.setAttribute('aria-selected',String(active));button.tabIndex=active?0:-1;});
   $('#domain-detail').setAttribute('aria-labelledby',`domain-${key}`);
-  $('#domain-detail').innerHTML=`<span class="domain-interest">${data.interest} · ${data.agents}</span><h3>${data.title}</h3><p>${escapeHTML(data.description)}</p><dl><div><dt>What stays private</dt><dd>${escapeHTML(data.private)}</dd></div><div><dt>How the task is scored</dt><dd>${escapeHTML(data.score)}</dd></div><div><dt>Why interaction matters</dt><dd>${escapeHTML(data.interaction)}</dd></div></dl><a class="text-link" href="research.html#how">Full scenario breakdown ↗</a>`;
+  $('#domain-detail').innerHTML=`<span class="domain-interest">${data.interest} · ${data.agents}</span><h3>${data.title}</h3><p>${escapeHTML(data.description)}</p><dl><div><dt>What stays private</dt><dd>${escapeHTML(data.private)}</dd></div><div><dt>How the task is scored</dt><dd>${escapeHTML(data.score)}</dd></div><div><dt>Why interaction matters</dt><dd>${escapeHTML(data.interaction)}</dd></div></dl><a class="text-link" href="https://huggingface.co/datasets/a2a-salesforce/a2-bench">Browse source scenarios ↗</a>`;
 }
 function connectTabs(selector, attribute, select, vertical=false) {
   const tabs=$$(selector);
@@ -141,7 +141,6 @@ connectTabs('[data-domain]','domain',selectDomain,true);
 // Preserve existing section links while giving the project narrative the primary route.
 const legacySections={mission:'why',discover:'findings',transcripts:'cases'};
 if(legacySections[location.hash.slice(1)]) location.replace(`#${legacySections[location.hash.slice(1)]}`);
-if(location.hash==='#cite') location.replace('research.html#cite');
 // A finding linked directly should be expanded so the anchor exposes its evidence.
 function expandLinkedFinding() {
   let key = location.hash.slice(1);

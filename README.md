@@ -14,8 +14,9 @@ Open [http://localhost:4173](http://localhost:4173).
 
 ## Files
 
-- `index.html` — project website.
-- `research.html` — complete research narrative and figures.
+- `index.html` — interactive project website and root homepage.
+- `project.html` — redirects older project links to the root homepage.
+- `research.html` — redirects older analysis links to the relevant homepage section.
 - `assets/` — local styles, scripts, fonts, and images.
 - `transcripts/` — seven readable transcripts and their interactive viewers.
 
