@@ -31,6 +31,8 @@
 .example-comparison-note { font-size: 14px; margin: 16px 0 24px; }
 .example-takeaway { background: var(--sky, #f6f5f1); padding: 20px; border-radius: 8px; }
 .finding-figure { max-width: 850px; margin: 24px 0; }
+.other-findings .discovery-detail { padding: 0 0 28px 60px; align-items: start; }
+.discovery-detail .discovery-copy > p:first-child { margin-top: 0; }
 .finding-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 8px; }
 .finding-figure figcaption, .finding-source-note { font-size: 12px; line-height: 1.75; color: var(--muted); margin-top: 12px; }
 .finding-table-wrap { overflow-x: auto; margin: 24px 0 12px; }
@@ -73,4 +75,7 @@
   .motivation-section .example-outcomes { gap: 16px; }
   .hero-premise { grid-template-columns: 1fr; }
   .hero-premise > div { padding-top: 12px; }
+}
+@media (max-width: 700px) {
+  .other-findings .discovery-detail { padding-left: 40px; }
 }
