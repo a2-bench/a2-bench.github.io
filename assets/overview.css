@@ -1,11 +1,16 @@
 /* Shared explanatory prose for the project and research pages. */
 .project-heading > .hero-intro:not(.project-label) { max-width: none; }
+.principal-symbol > svg { display: block; width: 21px; height: 21px; }
+.diagram-agent-heading { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 10px 0 8px; }
+.diagram-agent-heading h3 { margin: 0; }
+.diagram-agent-symbol { display: grid; place-items: center; width: 44px; height: 44px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--sky); color: var(--blue); }
+.diagram-agent-symbol > svg { display: block; width: 32px; height: 32px; }
 .hero-intro-opening { display: block; white-space: nowrap; }
 .hero-intro-detail { display: block; max-width: 740px; }
 .executive-summary { border-block: 1px solid var(--rule, #d8e5f0); padding: 26px 0 10px; margin-block: 34px; }
 .executive-summary h2 { font-family: var(--sans); font-size: 24px; line-height: 1.3; letter-spacing: -.4px; margin: 0 0 20px; }
 .executive-summary p { font-size: 16px; line-height: 1.8; margin-bottom: 16px; }
-.legal-example > h2 { margin-top: 45px; }
+.legal-example > h2 { margin-top: 45px; margin-bottom: 20px; }
 .legal-example > p { line-height: 1.8; }
 .example-roles, .example-outcomes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin: 24px 0; }
 .example-roles > div { padding: 18px 20px; border: 1px solid var(--rule, #d8e5f0); border-radius: 8px; }
@@ -46,7 +51,7 @@
 .research-site .legal-example figure.hero figcaption { font-size: 13px; }
 .motivation-introduction { max-width: 920px; margin-bottom: 42px; }
 .motivation-introduction p { font-size: 16px; line-height: 1.9; color: var(--ink); }
-.motivation-introduction .research-question { margin-bottom: 40px; }
+.motivation-introduction .research-question { margin-bottom: 40px; padding: clamp(18px, 2.5vw, 28px); border: 1px solid var(--line); border-left: 4px solid var(--blue); border-radius: var(--radius); background: var(--sky); }
 .motivation-section > .legal-example { border-top: 1px solid var(--line); }
 .motivation-section .example-outcomes { gap: 28px; }
 .motivation-section .legal-example > h2 { font-size: 32px; letter-spacing: -.8px; }
@@ -78,4 +83,5 @@
 }
 @media (max-width: 700px) {
   .other-findings .discovery-detail { padding-left: 40px; }
+  .diagram-agent-heading { justify-content: flex-start; }
 }
